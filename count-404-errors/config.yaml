@@ -1,7 +1,6 @@
 slug: count-404-errors
 title: Count 404 Errors
 difficulty: easy
-category: text-processing
 tools: [grep, awk]
 topics: [log-analysis]
 time_limit_seconds: 5
