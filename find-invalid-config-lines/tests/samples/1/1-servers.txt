@@ -1,0 +1,6 @@
+api-prod-01 10.0.1.10 8080
+api-prod-02 10.0.1.11 8080
+worker-prod-01 10.0.2.10 9000
+invalid-server
+db-prod-01 10.0.3.10 5432
+cache-prod-01 10.0.4.10 abc

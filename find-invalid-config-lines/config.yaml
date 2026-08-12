@@ -1,0 +1,8 @@
+id: 9
+slug: find-invalid-config-lines
+title: Find Invalid Config Lines
+difficulty: easy
+tools: [awk]
+topics: [validation, config-management]
+time_limit_seconds: 5
+memory_limit_mb: 64
