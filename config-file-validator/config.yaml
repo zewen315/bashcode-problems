@@ -1,0 +1,8 @@
+id: 8
+slug: config-file-validator
+title: Config File Validator
+difficulty: medium
+tools: [awk]
+topics: [config-management, validation, text-processing]
+time_limit_seconds: 5
+memory_limit_mb: 64

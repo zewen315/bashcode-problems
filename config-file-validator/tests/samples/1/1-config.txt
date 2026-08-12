@@ -1,0 +1,6 @@
+PORT=8080
+HOST=localhost
+PORT=9090
+=invalid
+DEBUG
+TIMEOUT=30

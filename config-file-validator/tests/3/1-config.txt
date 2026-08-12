@@ -1,0 +1,6 @@
+noequalshere
+
+=emptykey
+ANOTHERBAD
+
+VALID_ONE=fine

@@ -1,0 +1,4 @@
+Malformed line: =invalid
+Malformed line: DEBUG
+Duplicate key: PORT
+Missing required key: API_KEY
