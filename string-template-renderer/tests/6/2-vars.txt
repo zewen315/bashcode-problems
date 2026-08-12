@@ -1,0 +1,15 @@
+VAR_0=multi word value with spaces424
+VAR_1=user@host.com983
+VAR_2=a.b.c.d296
+VAR_3=price=$50.00784
+VAR_4=multi word value with spaces677
+VAR_5=user@host.com112
+VAR_6=/usr/bin/env254
+VAR_7=line-with-dashes834
+VAR_8=line-with-dashes258
+VAR_9=multi word value with spaces821
+VAR_10=a.b.c.d655
+VAR_11=line-with-dashes140
+VAR_12=multi word value with spaces63
+VAR_13=price=$50.00832
+VAR_14=100% guaranteed.154

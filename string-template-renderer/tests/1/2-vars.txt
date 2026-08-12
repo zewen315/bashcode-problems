@@ -1,0 +1,3 @@
+NAME=Alice
+BALANCE=$100.50
+EMAIL=alice@example.com

@@ -1,0 +1,3 @@
+PATH=/usr/local/bin
+QUERY=name=alice&active=true
+NOTE=50% off & free shipping.

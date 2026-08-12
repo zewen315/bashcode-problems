@@ -1,0 +1,2 @@
+Hello {{NAME}}, your balance is {{BALANCE}}.
+Contact: {{EMAIL}}
