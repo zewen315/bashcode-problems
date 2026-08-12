@@ -1,0 +1,4 @@
+api-prod-01.bashcode.net
+api-prod-02.bashcode.net
+api-prod-03.bashcode.net
+api-prod-04.bashcode.net

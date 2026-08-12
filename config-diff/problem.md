@@ -1,18 +1,22 @@
 # Config Diff
 
-Given a file containing an old config and a new config, print the
-differences between them.
+Given an old config and a new config, print the differences between
+them.
 
 ## Input
-A single argument: the path to a file with `KEY=VALUE` settings for the
-old config, then a line containing exactly `---`, then the `KEY=VALUE`
-settings for the new config. For example:
+Two arguments: the path to the old config, then the path to the new
+config. Each file has one `KEY=VALUE` setting per line. For example, the
+old config might be:
 
 ```
 LOG_LEVEL=info
 PORT=8080
 RETRIES=3
----
+```
+
+and the new config:
+
+```
 LOG_LEVEL=debug
 PORT=9090
 WORKERS=4
@@ -32,19 +36,20 @@ ascending:
   for it.
 
 ## Constraints
-- The file has at most 10,000 lines total, and contains exactly one
-  `---` separator line.
-- Keys are unique within each config section.
-- Keys and values never contain `=` themselves, and no key is literally
-  named `---`.
+- Each file has at most 10,000 lines.
+- Keys are unique within each file.
+- Keys and values never contain `=` themselves.
 
 ## Example
-Input:
+Old config:
 ```
 LOG_LEVEL=info
 PORT=8080
 RETRIES=3
----
+```
+
+New config:
+```
 LOG_LEVEL=debug
 PORT=9090
 WORKERS=4

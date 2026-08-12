@@ -1,0 +1,5 @@
+worker-prod-01.bashcode.net
+api-prod-01.bashcode.net
+checkout-prod-01.bashcode.net
+search-prod-01.bashcode.net
+billing-prod-01.bashcode.net

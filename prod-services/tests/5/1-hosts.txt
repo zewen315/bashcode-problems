@@ -1,0 +1,3 @@
+api-PROD-01.bashcode.net
+search-Prod-02.bashcode.net
+checkout-prod-01.bashcode.net

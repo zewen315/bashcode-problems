@@ -1,0 +1,3 @@
+checkout-staging-01.bashcode.net
+worker-dev-01.bashcode.net
+search-dev-02.bashcode.net
