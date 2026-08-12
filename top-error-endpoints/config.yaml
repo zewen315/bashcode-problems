@@ -1,0 +1,7 @@
+slug: top-error-endpoints
+title: Top Error Endpoints
+difficulty: easy
+tools: [awk, sort, uniq, head]
+topics: [log-analysis]
+time_limit_seconds: 5
+memory_limit_mb: 64
