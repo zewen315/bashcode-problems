@@ -1,0 +1,7 @@
+slug: config-diff
+title: Config Diff
+difficulty: medium
+tools: [awk, sort]
+topics: [text-processing, diffing]
+time_limit_seconds: 5
+memory_limit_mb: 64

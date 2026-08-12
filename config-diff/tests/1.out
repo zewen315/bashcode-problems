@@ -1,0 +1,6 @@
+- LOG_LEVEL=info
++ LOG_LEVEL=debug
+- PORT=8080
++ PORT=9090
+- RETRIES=3
++ WORKERS=4
