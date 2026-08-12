@@ -1,0 +1,6 @@
+PID USER ELAPSED COMMAND
+1201 root 35 nginx
+1334 deploy 420 worker
+1455 postgres 86400 postgres
+1521 deploy 7200 python
+1602 root 12 sshd
