@@ -1,0 +1,3 @@
+edge-a 100 10
+edge-b 200 20
+edge-c 50 5

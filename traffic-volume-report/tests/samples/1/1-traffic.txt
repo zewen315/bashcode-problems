@@ -1,0 +1,4 @@
+edge-sfo 1200 60
+edge-nyc 850 30
+edge-lhr 1500 60
+edge-fra 600 60

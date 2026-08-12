@@ -1,0 +1,3 @@
+edge-exact 500 100
+edge-over 1 50001
+edge-under 500 99

@@ -1,0 +1,4 @@
+edge-zero-rps 0 1000
+edge-zero-dur 5000 0
+edge-both-zero 0 0
+edge-real 2000 60
