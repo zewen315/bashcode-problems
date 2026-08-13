@@ -1,2 +1,2 @@
 # bashcode-problems
-LeetCode-style Bash and Linux challenges for SRE, DevOps, and infrastructure engineers.
+Hands-on Bash and Linux practice problems for SRE, DevOps, and infrastructure engineers.
