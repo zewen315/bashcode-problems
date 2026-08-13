@@ -3,6 +3,6 @@ slug: traffic-volume-report
 title: Traffic Volume Report
 difficulty: easy
 tools: [awk, sort]
-topics: [text-processing, filtering, arithmetic, sorting]
+topics: [filtering, arithmetic, sorting]
 time_limit_seconds: 5
 memory_limit_mb: 64

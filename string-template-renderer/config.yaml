@@ -3,6 +3,6 @@ slug: string-template-renderer
 title: String Template Renderer
 difficulty: medium
 tools: [awk]
-topics: [text-processing, templating]
+topics: [templating]
 time_limit_seconds: 5
 memory_limit_mb: 64
