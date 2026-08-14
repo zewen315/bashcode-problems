@@ -1,0 +1,19 @@
+name: Deploy problems to droplet
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    steps:
+      - name: git pull on droplet
+        env:
+          SSH_KEY: ${{ secrets.DROPLET_DEPLOY_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H 143.244.170.160 >> ~/.ssh/known_hosts
+          ssh -i ~/.ssh/deploy_key root@143.244.170.160
