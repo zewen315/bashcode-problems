@@ -1,0 +1,2 @@
+BROKEN_SYMLINK a/b/broken
+EMPTY_FILE a/b/c/empty_file.dat

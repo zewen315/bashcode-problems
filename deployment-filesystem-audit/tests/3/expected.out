@@ -1,0 +1,3 @@
+EMPTY_FILE scripts/broken.sh
+NOT_EXECUTABLE scripts/broken.sh
+WORLD_WRITABLE scripts/broken.sh

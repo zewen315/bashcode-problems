@@ -1,0 +1,8 @@
+WORLD_WRITABLE config
+WORLD_WRITABLE logs/access.log
+EMPTY_FILE logs/empty.log
+BROKEN_SYMLINK releases/v2/link-to-nowhere
+EMPTY_FILE releases/v3/nested/build.artifact
+NOT_EXECUTABLE releases/v3/nested/migrate.sh
+EMPTY_FILE scripts/stop.sh
+NOT_EXECUTABLE scripts/stop.sh

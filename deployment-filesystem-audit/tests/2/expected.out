@@ -1,0 +1,2 @@
+WORLD_WRITABLE config/secrets.yml
+WORLD_WRITABLE tmp

@@ -1,0 +1,3 @@
+- `current` — a symlink to `releases/v1`, which exists (working, not broken)
+- `config/secrets.yml` — mode 666 (world-writable)
+- `tmp/` — mode 777 (a world-writable directory)
