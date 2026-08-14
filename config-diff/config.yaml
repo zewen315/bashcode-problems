@@ -3,6 +3,6 @@ slug: config-diff
 title: Config Diff
 difficulty: medium
 tools: [awk, sort]
-topics: [diffing, config-management]
+topics: [text-processing]
 time_limit_seconds: 5
 memory_limit_mb: 64

@@ -3,6 +3,6 @@ slug: config-file-validator
 title: Config File Validator
 difficulty: medium
 tools: [awk]
-topics: [config-management, validation]
+topics: [text-processing]
 time_limit_seconds: 5
 memory_limit_mb: 64

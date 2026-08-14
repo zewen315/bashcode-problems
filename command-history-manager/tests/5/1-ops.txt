@@ -1,0 +1,8 @@
+ADD one
+ADD two
+ADD three
+ADD four
+ADD five
+UNDO
+UNDO
+PRINT

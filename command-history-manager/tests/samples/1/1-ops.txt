@@ -1,0 +1,6 @@
+ADD deploy
+ADD restart
+ADD status
+UNDO
+ADD rollback
+PRINT

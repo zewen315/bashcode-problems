@@ -1,0 +1,4 @@
+UNDO
+PRINT
+ADD alpha
+PRINT

@@ -1,0 +1,3 @@
+UNDO
+ADD a
+PRINT

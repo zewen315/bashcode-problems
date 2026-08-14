@@ -1,0 +1,7 @@
+ADD x
+ADD y
+UNDO
+UNDO
+UNDO
+ADD z
+PRINT

@@ -3,6 +3,6 @@ slug: sum-of-squares
 title: Sum of Squares
 difficulty: easy
 tools: []
-topics: [math]
+topics: [shell-programming]
 time_limit_seconds: 5
 memory_limit_mb: 64
