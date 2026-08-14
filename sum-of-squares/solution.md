@@ -1,17 +1,45 @@
 # Solution
 
-Looping from `1` to `n` and accumulating `i*i` works, but there's a
-closed-form identity that avoids the loop entirely:
+Read `n` from the input file, then compute `1^2 + 2^2 + ... + n^2`.
+Three ways to get there:
 
-```
-1^2 + 2^2 + ... + n^2 = n(n+1)(2n+1) / 6
+## 1. `while` loop
+
+```bash
+n=$(<"$1")
+i=1
+sum=0
+while [ "$i" -le "$n" ]; do
+  sum=$((sum + i * i))
+  i=$((i + 1))
+done
+echo "$sum"
 ```
 
-- `n = $1` reads the single integer from the input file.
-- `n * (n + 1) * (2 * n + 1) / 6` evaluates the formula directly. The
-  product of three consecutive-ish terms is always divisible by 6, so
-  the division is exact — no rounding or truncation needed, even for
-  `n = 0` (every term is `0`, so the whole expression is `0`).
-- The constraint `n <= 100000` keeps the intermediate product well
-  under `2^53`, so `awk`'s double-precision arithmetic represents it
-  exactly.
+Counts `i` up from `1` to `n`, adding `i * i` to `sum` each pass.
+Bash's `$(( ))` handles the arithmetic and comparison directly, no
+external tools needed.
+
+## 2. `for` loop
+
+```bash
+n=$(<"$1")
+sum=0
+for ((i = 1; i <= n; i++)); do
+  sum=$((sum + i * i))
+done
+echo "$sum"
+```
+
+Same accumulation, just written with a C-style `for` instead of manually
+incrementing `i` — purely a style choice, not a performance one.
+
+## 3. `awk`, closed-form
+
+```bash
+awk '{ n = $1; print n * (n + 1) * (2 * n + 1) / 6 }' "$1"
+```
+
+See `solution.sh`. Skips the loop entirely via the identity
+`1^2 + ... + n^2 = n(n+1)(2n+1)/6` — the product is always divisible
+by 6, so the division is exact, including at `n = 0`.

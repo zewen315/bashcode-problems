@@ -2,7 +2,7 @@ id: 10
 slug: sum-of-squares
 title: Sum of Squares
 difficulty: easy
-tools: [awk]
-topics: [arithmetic, math]
+tools: []
+topics: [math]
 time_limit_seconds: 5
 memory_limit_mb: 64
