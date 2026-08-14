@@ -29,13 +29,13 @@ If there are no `.log` files at all, or the most recent one has no
 ## Example
 Directory contents (name — last modified):
 ```
-app.log      — 10 days ago
-error.log    — 1 day ago   (most recently modified .log file)
-debug.log    — 5 days ago
-readme.txt   — 1 hour ago  (not a .log file — ignored despite being newest)
+payments.9f3e7a21.log      — 10 days ago
+auth-service.a1b2c3d4.log  — 1 day ago   (most recently modified .log file)
+worker-queue.5c8d0e12.log  — 5 days ago
+README.md                  — 1 hour ago  (not a .log file — ignored despite being newest)
 ```
 
-`error.log`'s content:
+`auth-service.a1b2c3d4.log`'s content:
 ```
 10:00 INFO starting up
 10:05 ERROR connection refused
@@ -44,9 +44,9 @@ readme.txt   — 1 hour ago  (not a .log file — ignored despite being newest)
 10:15 INFO recovered
 ```
 
-`readme.txt` is more recent than every `.log` file but never counts.
-Among the `.log` files, `error.log` is the most recent, so only its
-`ERROR` lines are printed.
+`README.md` is more recent than every `.log` file but never counts.
+Among the `.log` files, `auth-service.a1b2c3d4.log` is the most
+recent, so only its `ERROR` lines are printed.
 
 Output:
 ```
