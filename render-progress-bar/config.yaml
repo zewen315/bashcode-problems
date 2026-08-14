@@ -3,6 +3,6 @@ slug: render-progress-bar
 title: Render Progress Bar
 difficulty: easy
 tools: [awk]
-topics: [formatting, arithmetic]
+topics: [shell-programming]
 time_limit_seconds: 5
 memory_limit_mb: 64

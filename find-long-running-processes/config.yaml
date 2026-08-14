@@ -3,6 +3,6 @@ slug: find-long-running-processes
 title: Find Long-Running Processes
 difficulty: easy
 tools: [awk, sort]
-topics: [process-management, filtering, sorting]
+topics: [text-processing]
 time_limit_seconds: 5
 memory_limit_mb: 64

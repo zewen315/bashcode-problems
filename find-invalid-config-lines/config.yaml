@@ -3,6 +3,6 @@ slug: find-invalid-config-lines
 title: Find Invalid Config Lines
 difficulty: easy
 tools: [awk]
-topics: [validation]
+topics: [text-processing]
 time_limit_seconds: 5
 memory_limit_mb: 64

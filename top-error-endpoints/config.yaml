@@ -3,6 +3,6 @@ slug: top-error-endpoints
 title: Top Error Endpoints
 difficulty: medium
 tools: [awk, sort, uniq, head]
-topics: [log-analysis]
+topics: [text-processing]
 time_limit_seconds: 5
 memory_limit_mb: 64
