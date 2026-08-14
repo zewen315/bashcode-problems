@@ -22,7 +22,7 @@ while IFS= read -r line; do
 done < "$1"
 ```
 
-See `solution.sh`. `unset 'history[-1]'` drops the last element but
+`unset 'history[-1]'` drops the last element but
 leaves a gap in the index, so `history=("${history[@]}")` re-packs it
 — skip that and the next `+=` would land past the old length instead
 of appending where you'd expect.

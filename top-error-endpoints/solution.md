@@ -1,9 +1,22 @@
 # Solution
 
 The line format is fixed but irregular at the front (IP, two dashes,
-a bracketed timestamp), so the solution deliberately counts fields
-*from the end* of the line instead of trying to parse the messy part
-(see `solution.sh` below for the full pipeline).
+a bracketed timestamp). Two ways to pull the path and status out of
+that.
+
+## 1. `awk`, counting fields from the end
+
+`awk` deliberately counts fields *from the end* of the line instead of
+trying to parse the messy part.
+
+```bash
+awk '$(NF-1) ~ /^5[0-9][0-9]$/ {print $(NF-3)}' "$1" |
+  sort |
+  uniq -c |
+  sort -k1,1nr -k2,2 |
+  head -n 3 |
+  awk '{print $1, $2}'
+```
 
 - Counting from the end of a space-delimited line: the last field
   (`$NF`) is the response size, `$(NF-1)` is the status code,
@@ -26,3 +39,24 @@ a bracketed timestamp), so the solution deliberately counts fields
 - The final `awk '{print $1, $2}'` reformats `uniq -c`'s
   count-then-path output (which has a leading space before the count)
   into the clean `<count> <path>` shape the problem asks for.
+
+## 2. `grep -P`, extracting the path directly
+
+```bash
+grep -oP '"[A-Z]+ \K[^ ]+(?= HTTP/[0-9.]+" 5[0-9]{2} )' "$1" |
+  sort |
+  uniq -c |
+  sort -k1,1nr -k2,2 |
+  head -n 3 |
+  sed -E 's/^ +//'
+```
+
+Same idea, but instead of splitting the whole line into fields, a
+single Perl-compatible regex (`grep -P`) both finds and extracts the
+path in one pass: `\K` resets the match start (so only what follows it
+is actually output by `-o`), and the trailing `(?= HTTP/[0-9.]+" 5[0-9]{2} )`
+is a lookahead that requires a `5xx` status right after the path
+*without consuming it* — this is what makes non-`5xx` lines never
+match at all, so nothing after this line needs its own filter. The
+final `sed -E 's/^ +//'` replaces the trailing `awk` reformat, just
+stripping `uniq -c`'s leading spaces instead of reprinting both fields.

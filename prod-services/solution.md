@@ -2,9 +2,16 @@
 
 The key observation: every hostname is really just a series of fields
 separated by either `-` or `.` — `service`, `environment`, `instance`,
-`domain`. `awk` lets you split on more than one character at once by
-giving `-F` a character class instead of a single character (see
-`solution.sh` below for the full one-liner).
+`domain`. Two ways to split on that.
+
+## 1. `awk`
+
+`awk` lets you split on more than one character at once by giving `-F`
+a character class instead of a single character.
+
+```bash
+awk -F'[.-]' '$2 == "prod" { print $1 }' "$1" | sort -u
+```
 
 - `-F'[.-]'` splits each line on *either* `.` or `-`. For
   `api-prod-01.bashcode.net`, that produces fields `api`, `prod`,
@@ -22,3 +29,16 @@ giving `-F` a character class instead of a single character (see
 No need to validate the hostname shape beyond this — the constraints
 guarantee `service` and `environment` never contain `-` or `.`
 themselves, so the split is always unambiguous.
+
+## 2. `tr` + `cut` + `grep`
+
+```bash
+tr '.' '-' < "$1" | cut -d'-' -f1,2 | grep -- '-prod$' | cut -d'-' -f1 | sort -u
+```
+
+`cut` only splits on a single delimiter, so `tr '.' '-'` first
+normalizes every `.` to `-`, turning the two-delimiter problem into a
+one-delimiter one. `cut -d'-' -f1,2` takes just `service-environment`
+off the front of each (now-uniform) line, `grep -- '-prod$'` keeps the
+ones ending in `-prod`, and a second `cut -f1` drops the environment,
+leaving just the service name.

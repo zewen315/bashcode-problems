@@ -1,0 +1,8 @@
+id: 13
+slug: array-rotation
+title: Array Rotation
+difficulty: easy
+tools: []
+topics: [shell-programming]
+time_limit_seconds: 5
+memory_limit_mb: 64

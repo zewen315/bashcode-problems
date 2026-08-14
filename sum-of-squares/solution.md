@@ -40,6 +40,6 @@ incrementing `i` — purely a style choice, not a performance one.
 awk '{ n = $1; print n * (n + 1) * (2 * n + 1) / 6 }' "$1"
 ```
 
-See `solution.sh`. Skips the loop entirely via the identity
+Skips the loop entirely via the identity
 `1^2 + ... + n^2 = n(n+1)(2n+1)/6` — the product is always divisible
 by 6, so the division is exact, including at `n = 0`.

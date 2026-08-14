@@ -16,7 +16,7 @@ while read -r cmd a b; do
 done < "$1"
 ```
 
-See `solution.sh`. `declare -A` is the direct tool for this: `SET`,
+`declare -A` is the direct tool for this: `SET`,
 `GET`, and `DELETE` map straight onto assignment, `${arr[key]:-default}`,
 and `unset "arr[key]"`. The one gotcha is that `unset` needs its
 argument in double quotes, not single — `unset 'version[$a]'` would try

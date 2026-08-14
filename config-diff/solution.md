@@ -2,8 +2,36 @@
 
 This needs to know, for every key, whether it's in the old file, the
 new file, or both — which means loading both files into memory before
-printing anything, rather than a single streaming pass (see
-`solution.sh` below for the full script).
+printing anything, rather than a single streaming pass. Two ways to
+hold that.
+
+## 1. `awk`
+
+```bash
+awk -F= '
+  { eq = index($0, "="); key = substr($0, 1, eq - 1) }
+  ARGIND == 1 { old[key] = $0; oldset[key] = 1 }
+  ARGIND == 2 { new[key] = $0; newset[key] = 1 }
+  END {
+    for (k in oldset) all[k] = 1
+    for (k in newset) all[k] = 1
+    n = asorti(all, sorted)
+    for (i = 1; i <= n; i++) {
+      k = sorted[i]
+      if ((k in oldset) && (k in newset)) {
+        if (old[k] != new[k]) {
+          print "- " old[k]
+          print "+ " new[k]
+        }
+      } else if (k in oldset) {
+        print "- " old[k]
+      } else {
+        print "+ " new[k]
+      }
+    }
+  }
+' "$1" "$2"
+```
 
 - `key = substr($0, 1, eq - 1)` extracts the key using `index()`
   rather than relying on `-F=`'s own field split — this matters
@@ -29,3 +57,34 @@ printing anything, rather than a single streaming pass (see
   with different values, just `-` if it was removed, just `+` if it
   was added — and nothing at all if the key is unchanged, since that
   case falls through without a matching branch.
+
+## 2. Bash associative arrays
+
+```bash
+declare -A old new
+while IFS='=' read -r key value; do old[$key]=$value; done < "$1"
+while IFS='=' read -r key value; do new[$key]=$value; done < "$2"
+
+{
+  (( ${#old[@]} )) && printf '%s\n' "${!old[@]}"
+  (( ${#new[@]} )) && printf '%s\n' "${!new[@]}"
+} | sort -u | while read -r key; do
+  if [[ -v old[$key] && -v new[$key] ]]; then
+    if [ "${old[$key]}" != "${new[$key]}" ]; then
+      echo "- ${key}=${old[$key]}"
+      echo "+ ${key}=${new[$key]}"
+    fi
+  elif [[ -v old[$key] ]]; then
+    echo "- ${key}=${old[$key]}"
+  else
+    echo "+ ${key}=${new[$key]}"
+  fi
+done
+```
+
+Same idea without `awk`: two associative arrays instead of one `awk`
+array with a presence flag, `sort -u` for the key union instead of
+`asorti`, and `[[ -v arr[key] ]]` to test presence directly. Worth
+knowing: `printf '%s\n' "${!old[@]}"` on a *zero-element* array still
+runs the format once and prints a spurious blank line — the `(( ${#old[@]} ))`
+guard exists specifically to skip that call when either file is empty.
