@@ -1,0 +1,4 @@
+- `logs/app.log` — 120 bytes
+- `logs/error.log` — 340 bytes
+- `logs/readme.txt` — 50 bytes (not a `.log` file, ignored)
+- `archive/old.log` — 75 bytes

@@ -1,0 +1,8 @@
+id: 17
+slug: backup-size-report
+title: Backup Size Report
+difficulty: easy
+tools: [find]
+topics: [files]
+time_limit_seconds: 5
+memory_limit_mb: 64
