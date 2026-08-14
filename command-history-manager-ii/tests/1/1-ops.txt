@@ -1,0 +1,7 @@
+SET api v1
+SET web v3
+GET api
+SET api v2
+GET api
+DELETE web
+GET web

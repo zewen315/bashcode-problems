@@ -1,0 +1,2 @@
+DELETE ghost
+GET ghost

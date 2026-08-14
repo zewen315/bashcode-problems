@@ -1,0 +1,12 @@
+SET api v1
+SET web v1
+SET db v1
+GET api
+DELETE web
+SET web v2
+GET web
+GET db
+DELETE db
+GET db
+SET api v2
+GET api

@@ -1,0 +1,8 @@
+id: 12
+slug: command-history-manager-ii
+title: Command History Manager II
+difficulty: medium
+tools: []
+topics: [shell-programming]
+time_limit_seconds: 5
+memory_limit_mb: 64

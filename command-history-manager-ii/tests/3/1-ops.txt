@@ -1,0 +1,5 @@
+SET svc 1.0
+DELETE svc
+GET svc
+SET svc 2.0
+GET svc

@@ -1,0 +1,7 @@
+SET a 1
+SET b 2
+SET a 3
+GET a
+GET b
+SET b 4
+GET b
