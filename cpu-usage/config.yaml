@@ -1,0 +1,8 @@
+id: 14
+slug: cpu-usage
+title: CPU Usage
+difficulty: easy
+tools: []
+topics: [shell-programming]
+time_limit_seconds: 5
+memory_limit_mb: 64

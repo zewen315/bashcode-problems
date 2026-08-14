@@ -1,0 +1,4 @@
+api 40
+worker 85
+database 70
+cache 95

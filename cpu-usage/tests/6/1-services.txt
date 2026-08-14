@@ -1,0 +1,6 @@
+one 85
+two 92
+three 60
+four 99
+five 80
+six 45
