@@ -1,0 +1,3 @@
+2026-08-15|Frontend|us-east|301|20
+2026-08-15|Backend|us-west|404|15
+2026-08-15|Queue|eu-central|503|999

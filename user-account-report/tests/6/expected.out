@@ -1,0 +1,4 @@
+root /root /bin/bash
+alice /home/alice /bin/bash
+bob /home/bob /bin/zsh
+carol /home/carol /bin/sh

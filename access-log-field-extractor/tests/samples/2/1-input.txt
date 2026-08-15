@@ -1,0 +1,2 @@
+2026-08-15|Gateway|eu-west|301|55
+2026-08-15|CACHE|eu-west|200|12

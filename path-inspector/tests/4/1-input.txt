@@ -1,0 +1,1 @@
+/opt/bin:/opt/bin:/usr/bin:/usr/bin:/bin

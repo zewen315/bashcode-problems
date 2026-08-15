@@ -1,0 +1,2 @@
+root /root /bin/bash
+sync /bin /bin/sync

@@ -1,0 +1,1 @@
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sbin:/opt/homebrew/bin:/usr/bin:/opt/homebrew/bin:/snap/bin

@@ -1,0 +1,8 @@
+id: 38
+slug: path-inspector
+title: PATH Inspector
+difficulty: easy
+tools: [tr]
+topics: [text-processing]
+time_limit_seconds: 5
+memory_limit_mb: 64

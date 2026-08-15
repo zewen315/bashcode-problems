@@ -1,0 +1,4 @@
+svc1:x:2001:2001:svc1:/srv/svc1:/sbin/nologin
+svc2:x:2002:2002:svc2:/srv/svc2:/usr/sbin/nologin
+svc3:x:2003:2003:svc3:/srv/svc3:/bin/nologin
+bob:x:1002:1002:Bob:/home/bob:/bin/zsh

@@ -1,0 +1,8 @@
+id: 36
+slug: access-log-field-extractor
+title: Access Log Field Extractor
+difficulty: easy
+tools: [cut, tr]
+topics: [text-processing]
+time_limit_seconds: 5
+memory_limit_mb: 64

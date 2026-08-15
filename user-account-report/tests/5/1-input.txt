@@ -1,0 +1,1 @@
+service:x:900:900:Service:/srv/service:/usr/sbin/nologin

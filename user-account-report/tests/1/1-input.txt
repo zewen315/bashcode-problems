@@ -1,0 +1,5 @@
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+games:x:60:60:games:/usr/games:/usr/sbin/nologin

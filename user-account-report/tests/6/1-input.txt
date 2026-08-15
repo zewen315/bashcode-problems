@@ -1,0 +1,9 @@
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+alice:x:1001:1001:Alice:/home/alice:/bin/bash
+bob:x:1002:1002:Bob:/home/bob:/bin/zsh
+ftp:x:100:100:ftp:/srv/ftp:/bin/false
+deploy:x:1003:1003:Deploy:/srv/deploy:/usr/sbin/nologin
+carol:x:1004:1004:Carol:/home/carol:/bin/sh

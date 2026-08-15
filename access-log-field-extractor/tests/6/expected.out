@@ -1,0 +1,8 @@
+api 200
+worker-1 500
+search 200
+db_replica 200
+cache 301
+auth-service 401
+billing 402
+cdn 200

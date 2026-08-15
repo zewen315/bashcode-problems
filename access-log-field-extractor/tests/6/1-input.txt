@@ -1,0 +1,8 @@
+2026-08-15|API|us-east|200|143
+2026-08-15|Worker-1|us-west|500|892
+2026-08-15|search|us-east|200|231
+2026-08-15|DB_Replica|eu-west|200|44
+2026-08-15|CACHE|us-east|301|9
+2026-08-15|Auth-Service|us-west|401|18
+2026-08-15|billing|eu-central|402|27
+2026-08-15|CDN|global|200|3

@@ -1,0 +1,3 @@
+2026-08-15|API-Gateway|us-east|200|100
+2026-08-15|Worker-2|us-west|500|200
+2026-08-15|DB_Primary|us-east|200|50

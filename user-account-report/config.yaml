@@ -1,0 +1,8 @@
+id: 37
+slug: user-account-report
+title: User Account Report
+difficulty: easy
+tools: [cut, grep]
+topics: [text-processing]
+time_limit_seconds: 5
+memory_limit_mb: 64
