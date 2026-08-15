@@ -1,0 +1,6 @@
+{"service": "zeta", "level": "ERROR", "tags": ["prod"]}
+{"service": "alpha", "level": "ERROR", "tags": ["prod"]}
+{"service": "beta", "level": "CRITICAL", "tags": ["prod"]}
+{"service": "alpha", "level": "CRITICAL", "tags": ["prod"]}
+{"service": "zeta", "level": "ERROR", "tags": ["prod"]}
+{"service": "beta", "level": "ERROR", "tags": ["prod"]}

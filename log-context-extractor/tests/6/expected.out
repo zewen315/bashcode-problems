@@ -1,0 +1,19 @@
+1-INFO a
+2-INFO b
+3:ERROR x
+4-INFO c
+5-INFO d
+--
+8-INFO g
+9-INFO h
+10:ERROR y
+11-INFO i
+12:ERROR z
+13-INFO j
+14-INFO k
+--
+16-INFO m
+17-INFO n
+18:ERROR o
+19-INFO p
+20-INFO q

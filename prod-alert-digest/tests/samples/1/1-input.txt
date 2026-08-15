@@ -1,0 +1,5 @@
+{"service": "api", "level": "ERROR", "tags": ["prod", "us-east"], "message": "timeout"}
+{"tags": ["staging"], "level": "ERROR", "service": "api"}
+{"service": "auth", "level": "WARN", "tags": ["prod"]}
+{"service": "auth", "level": "CRITICAL", "tags": ["prod", "eu-west"]}
+{"level": "ERROR", "tags": ["prod"], "service": "auth"}

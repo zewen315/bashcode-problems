@@ -1,0 +1,12 @@
+{"service": "api", "level": "ERROR", "tags": ["prod", "us-east"]}
+{"level": "CRITICAL", "tags": ["prod"], "service": "api"}
+{"service": "api", "level": "WARN", "tags": ["prod"]}
+{"service": "auth", "level": "ERROR", "tags": ["staging"]}
+{"service": "auth", "level": "CRITICAL", "tags": ["prod", "internal"], "note": "x"}
+{"service": "db", "level": "ERROR", "tags": []}
+{"service": "db", "level": "CRITICAL", "tags": ["prod"]}
+{"service": "db", "level": "ERROR", "tags": ["prod"]}
+{"service": "cache", "level": "INFO", "tags": ["prod"]}
+{"service": "cache", "level": "ERROR", "tags": ["prod", "eu-west", "cache-cluster"]}
+{"service": "gateway", "level": "CRITICAL", "tags": ["dev"]}
+{"service": "auth", "level": "ERROR", "tags": ["prod"]}

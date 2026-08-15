@@ -1,0 +1,5 @@
+INFO start
+INFO connecting
+ERROR timeout
+INFO retry
+INFO ok

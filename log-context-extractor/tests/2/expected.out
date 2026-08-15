@@ -1,0 +1,7 @@
+1:ERROR beginning
+2-INFO a
+3-INFO b
+--
+5-INFO d
+6-INFO e
+7:ERROR ending

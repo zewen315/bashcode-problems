@@ -1,0 +1,4 @@
+{"level": "ERROR", "service": "gateway", "extra": 123, "tags": ["prod", "us-east"], "message": "x"}
+{"tags": ["prod"], "message": "y", "service": "gateway", "level": "CRITICAL", "region": "eu"}
+{"service": "gateway", "tags": [], "level": "ERROR"}
+{"message": "no prod here", "level": "ERROR", "tags": ["dev"], "service": "gateway"}

@@ -1,0 +1,7 @@
+INFO start
+ERROR db down
+INFO retry
+INFO ok
+INFO steady
+ERROR cache miss
+INFO recovered

@@ -1,0 +1,6 @@
+{"service": "worker", "level": "INFO", "tags": ["prod"]}
+{"service": "worker", "level": "WARN", "tags": ["prod"]}
+{"service": "worker", "level": "ERROR", "tags": ["prod"]}
+{"service": "queue", "level": "WARN", "tags": ["prod", "us-east"]}
+{"service": "queue", "level": "CRITICAL", "tags": ["prod"]}
+{"service": "queue", "level": "CRITICAL", "tags": ["prod"]}

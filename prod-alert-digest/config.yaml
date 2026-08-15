@@ -1,0 +1,8 @@
+id: 33
+slug: prod-alert-digest
+title: Prod Alert Digest
+difficulty: medium
+tools: [jq]
+topics: [text-processing]
+time_limit_seconds: 5
+memory_limit_mb: 64

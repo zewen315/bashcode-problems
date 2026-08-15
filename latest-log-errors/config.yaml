@@ -2,7 +2,7 @@ id: 15
 slug: latest-log-errors
 title: Latest Log Errors
 difficulty: medium
-tools: [find]
+tools: [find, grep]
 topics: [files]
 time_limit_seconds: 5
 memory_limit_mb: 64

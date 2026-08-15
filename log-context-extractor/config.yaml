@@ -1,0 +1,8 @@
+id: 32
+slug: log-context-extractor
+title: Log Context Extractor
+difficulty: hard
+tools: [grep]
+topics: [text-processing]
+time_limit_seconds: 5
+memory_limit_mb: 64

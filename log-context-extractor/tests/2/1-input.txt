@@ -1,0 +1,7 @@
+ERROR beginning
+INFO a
+INFO b
+INFO c
+INFO d
+INFO e
+ERROR ending

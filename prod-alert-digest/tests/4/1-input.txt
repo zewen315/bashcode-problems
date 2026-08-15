@@ -1,0 +1,5 @@
+{"service": "svcA", "level": "ERROR", "tags": ["us-east", "eu-west", "prod"]}
+{"service": "svcB", "level": "CRITICAL", "tags": ["staging", "canary"]}
+{"service": "svcA", "level": "ERROR", "tags": ["prod", "canary", "internal"]}
+{"service": "svcB", "level": "ERROR", "tags": ["prod"]}
+{"service": "svcC", "level": "CRITICAL", "tags": []}

@@ -1,0 +1,6 @@
+{"service": "api", "level": "ERROR", "tags": ["prod"]}
+{"service": "api", "level": "ERROR", "tags": ["prod"]}
+{"service": "api", "level": "CRITICAL", "tags": ["prod"]}
+{"service": "db", "level": "ERROR", "tags": ["prod"]}
+{"service": "db", "level": "CRITICAL", "tags": ["prod"]}
+{"service": "cache", "level": "CRITICAL", "tags": ["prod"]}
