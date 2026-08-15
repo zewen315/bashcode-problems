@@ -1,0 +1,8 @@
+id: 30
+slug: batch-command-runner-i
+title: Batch Command Runner I
+difficulty: medium
+tools: [xargs]
+topics: [shell-programming]
+time_limit_seconds: 5
+memory_limit_mb: 64

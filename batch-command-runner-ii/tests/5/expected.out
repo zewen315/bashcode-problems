@@ -1,0 +1,8 @@
+[--env]
+[prod]
+[gateway-01]
+[gateway-02]
+[cache-01]
+[--env]
+[prod]
+[cache-02]

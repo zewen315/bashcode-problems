@@ -1,0 +1,1 @@
+2024-01-01 10:00:00 INFO user login password=hunter2 card=4111-1111-1111-1111 status=ok

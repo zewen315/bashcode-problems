@@ -1,0 +1,4 @@
+gateway: DOWN
+auth: UP
+db: UP
+cache: UNKNOWN

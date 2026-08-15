@@ -1,0 +1,5 @@
+2
+sh
+-c
+printf "[%s]\n" "$1"; case "$1" in worker-01) exit 7;; esac
+_

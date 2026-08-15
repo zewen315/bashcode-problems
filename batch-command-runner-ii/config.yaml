@@ -1,0 +1,8 @@
+id: 31
+slug: batch-command-runner-ii
+title: Batch Command Runner II
+difficulty: hard
+tools: [xargs]
+topics: [shell-programming]
+time_limit_seconds: 5
+memory_limit_mb: 64

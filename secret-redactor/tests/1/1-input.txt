@@ -1,0 +1,4 @@
+password=Sup3r$ecret!
+Secret=abc/def
+TOKEN=eyJhbGciOiJIUzI1NiIs
+Api_Key=AKIA1234567890

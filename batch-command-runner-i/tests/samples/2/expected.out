@@ -1,0 +1,2 @@
+deploy api-01 api-02 worker-01
+deploy worker-02 worker-03

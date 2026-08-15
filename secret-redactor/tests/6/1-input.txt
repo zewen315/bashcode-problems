@@ -1,0 +1,7 @@
+2024-02-01 09:00:01 INFO checkout started user=alice
+2024-02-01 09:00:02 DEBUG payment token=abc.def.ghi card=4111-1111-1111-1111
+2024-02-01 09:00:03 WARN retry secret=xyz123
+2024-02-01 09:00:04 ERROR invalid mypassword=oops
+2024-02-01 09:00:05 INFO backup id=411111111111111 done
+2024-02-01 09:00:06 INFO api_key=AKIA_TEST card2=5500 0000 0000 0004
+2024-02-01 09:00:07 INFO checkout completed

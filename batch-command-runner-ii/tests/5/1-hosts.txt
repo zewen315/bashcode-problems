@@ -1,0 +1,4 @@
+gateway-01
+gateway-02
+cache-01
+cache-02

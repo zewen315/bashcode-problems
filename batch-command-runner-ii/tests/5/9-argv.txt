@@ -1,0 +1,7 @@
+3
+sh
+-c
+printf "[%s]\n" "$@"
+_
+--env
+prod

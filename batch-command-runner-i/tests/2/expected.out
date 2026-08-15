@@ -1,0 +1,2 @@
+deploy db-a db-b db-c
+deploy cache-a cache-b cache-c

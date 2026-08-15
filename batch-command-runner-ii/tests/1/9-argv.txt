@@ -1,0 +1,6 @@
+2
+sh
+-c
+printf "[%s]\n" "$@"
+_
+production cluster
