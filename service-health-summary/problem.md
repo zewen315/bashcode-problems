@@ -1,8 +1,7 @@
 # Service Health Summary
 
-A health-check sweep reports every service and every instance inside
-it, nested two levels deep — exactly the shape flat text tools can't
-navigate cleanly, and `jq` can.
+Report which services have at least one non-healthy instance, from
+a nested JSON health-check sweep.
 
 ## Input
 `$1` is the path to a single JSON file shaped like:
@@ -75,4 +74,3 @@ Output:
 ```
 api: api-2
 ```
-(`worker` is fully healthy, so it doesn't appear.)

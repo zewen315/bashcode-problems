@@ -45,12 +45,6 @@ Input:
 8 alice
 ```
 
-Alice: `0` allowed (1st). `1` allowed (2nd, window `(-4, 1]` only has
-`0`). `3` — window `(-2, 3]` now contains both `0` and `1`, so she's
-already at 2 → blocked. `4` — window `(-1, 4]` still contains both →
-blocked. `8` — window `(3, 8]` contains neither `0` nor `1` anymore →
-allowed. Bob's first request is always allowed.
-
 Output:
 ```
 0 alice ALLOWED

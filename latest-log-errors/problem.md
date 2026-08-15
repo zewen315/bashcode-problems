@@ -44,10 +44,6 @@ README.md                  — 1 hour ago  (not a .log file — ignored despite 
 10:15 INFO recovered
 ```
 
-`README.md` is more recent than every `.log` file but never counts.
-Among the `.log` files, `auth-service.a1b2c3d4.log` is the most
-recent, so only its `ERROR` lines are printed.
-
 Output:
 ```
 10:05 ERROR connection refused

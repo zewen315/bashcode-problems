@@ -61,11 +61,6 @@ Input:
 -rw-rw-rw- 1 alice staff  512 secrets.env
 ```
 
-`config.yaml` isn't world-writable (`r--` for other) — not flagged.
-`deploy.sh` is world-writable *and* executable — `dangerous`.
-`secrets.env` is world-writable but not executable anywhere —
-`world-writable`.
-
 Output:
 ```
 FLAG: dangerous deploy.sh

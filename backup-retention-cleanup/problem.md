@@ -1,10 +1,7 @@
 # Backup Retention Cleanup
 
-A real cleanup script never just deletes everything past some age —
-it also keeps a safety margin of the most recent backups no matter
-how old they've gotten, so a stretch of failed backup jobs can't
-wipe out the last good copy. This is the dry-run report a cleanup
-script would print before actually deleting anything.
+Print a dry-run report of which backup files a retention policy
+would delete.
 
 ## Retention policy
 - **Max age: 30 days.** A file strictly older than 30 days is a
@@ -47,12 +44,8 @@ db-2024-01-08.tar.gz — 33 days old
 db-2024-01-15.tar.gz — 26 days old
 db-2024-01-22.tar.gz — 19 days old
 ```
-
-The two oldest are both past the 30-day cutoff. The two newest
-(`db-2024-01-15...`, `db-2024-01-22...`) are inside the top-3-most-
-recent window, so they're protected regardless of age — which means
-even `db-2024-01-08...`, which is also within the top 3 most recent
-of these 4 files, is protected despite being 33 days old.
+`db-2024-01-08.tar.gz` is 33 days old but is one of the 3 most
+recent files, so it's protected.
 
 Output:
 ```

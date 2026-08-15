@@ -1,9 +1,7 @@
 # Secret Redactor II
 
-Part I redacted `key=value` secrets. This one goes after a
-differently-shaped leak: card numbers that ended up in a log line.
-Print every line back out, with any card-number-shaped number masked
-in place.
+Redact card numbers that leaked into a log file. Print every line
+back out, with any card-number-shaped number masked in place.
 
 ## Input
 `$1` is the path to a log file. Free-form lines, in any format.

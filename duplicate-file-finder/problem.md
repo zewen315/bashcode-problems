@@ -40,9 +40,6 @@ b/two.txt      — "hello world"
 a/three.txt    — "different"
 ```
 
-`a/one.txt` and `b/two.txt` have identical content. `a/three.txt` is
-unique.
-
 Output:
 ```
 DUPLICATE: a/one.txt b/two.txt

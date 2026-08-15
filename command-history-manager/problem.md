@@ -37,9 +37,6 @@ ADD rollback
 PRINT
 ```
 
-`UNDO` removes `status` (the most recent), leaving `deploy` and
-`restart`, then `rollback` gets added.
-
 Output:
 ```
 deploy

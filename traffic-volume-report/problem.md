@@ -46,6 +46,3 @@ For the example above:
 edge-lhr 90000
 edge-sfo 72000
 ```
-
-`edge-nyc` and `edge-fra` are omitted because their total request counts
-do not exceed `50000`.

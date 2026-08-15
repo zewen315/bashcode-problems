@@ -32,9 +32,6 @@ apple banana cherry date
 2
 ```
 
-`cherry` and `date` (the last two) wrap around to the front, and
-everything else shifts right by two.
-
 Output:
 ```
 cherry date apple banana

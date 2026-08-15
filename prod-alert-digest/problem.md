@@ -1,9 +1,6 @@
 # Prod Alert Digest
 
-Modern services log structured JSON instead of plain text — one
-object per line. You can't reliably `grep`/`awk` your way through
-that (field order isn't guaranteed, and values can be nested), which
-is exactly the gap `jq` fills.
+Count qualifying alert events per service from a JSON Lines log.
 
 ## Input
 `$1` is the path to a file of JSON Lines: one JSON object per line,
@@ -47,11 +44,6 @@ Input:
 {"service": "auth", "level": "CRITICAL", "tags": ["prod", "eu-west"]}
 {"level": "ERROR", "tags": ["prod"], "service": "auth"}
 ```
-- Line 1: `api`, `ERROR`, has `prod` → qualifies.
-- Line 2: `staging`, not `prod` → doesn't qualify.
-- Line 3: `WARN`, not `ERROR`/`CRITICAL` → doesn't qualify.
-- Line 4: `auth`, `CRITICAL`, has `prod` → qualifies.
-- Line 5: `auth`, `ERROR`, has `prod` → qualifies.
 
 Output:
 ```

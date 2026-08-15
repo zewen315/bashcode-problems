@@ -1,8 +1,6 @@
 # Backup Size Report
 
-Given a real directory tree, find out how much space its log files
-are actually taking up — the first question before deciding what's
-safe to clean up.
+Find the combined size of a directory tree's log files.
 
 ## Input
 `$1` is the path to a directory, which may contain nested
@@ -27,7 +25,7 @@ Directory contents (name — size):
 ```
 logs/app.log       — 120 bytes
 logs/error.log     — 340 bytes
-logs/readme.txt    — 50 bytes   (not a .log file — ignored)
+logs/readme.txt    — 50 bytes
 archive/old.log    — 75 bytes
 ```
 
@@ -35,4 +33,3 @@ Output:
 ```
 535
 ```
-(`120 + 340 + 75`; `readme.txt` doesn't count)

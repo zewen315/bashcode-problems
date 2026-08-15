@@ -1,9 +1,7 @@
 # Log Context Extractor
 
-When you're chasing an incident, a bare list of `ERROR` lines is
-rarely enough — you need the lines around each one too. This is
-exactly `grep -n -C N`'s job, and its output format is specific
-enough that reproducing it by hand is the real exercise.
+Print each matching line together with the lines around it, in the
+format of `grep -n -C N`.
 
 ## Input
 `$1` is the path to a log file. `$2` is the pattern to search for — a
