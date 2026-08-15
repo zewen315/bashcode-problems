@@ -1,0 +1,8 @@
+id: 26
+slug: ip-address-extractor
+title: IP Address Extractor
+difficulty: medium
+tools: []
+topics: [text-processing]
+time_limit_seconds: 5
+memory_limit_mb: 64

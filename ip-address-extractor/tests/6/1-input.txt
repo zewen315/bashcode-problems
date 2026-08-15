@@ -1,0 +1,6 @@
+192.168.1.1 leads to 10.0.0.1 then 172.16.254.1
+malformed 300.1.1.1 256.256.256.256 1.1.1.1.1
+just text, nothing to see
+back to normal 8.8.8.8 and 1.1.1.1
+007.1.1.1 leading zero triple digit
+0.0.0.0 zero is fine

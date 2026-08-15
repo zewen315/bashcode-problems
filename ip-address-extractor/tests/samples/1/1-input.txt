@@ -1,0 +1,1 @@
+connect to 192.168.1.1 or 10.0.0.1 failed, retry 999.1.1.1 later

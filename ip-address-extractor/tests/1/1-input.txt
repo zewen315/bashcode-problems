@@ -1,0 +1,3 @@
+server 192.168.0.1 is up
+no address here
+two addresses 10.10.10.10 and 8.8.8.8 seen

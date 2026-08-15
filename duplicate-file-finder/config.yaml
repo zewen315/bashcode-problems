@@ -1,0 +1,8 @@
+id: 25
+slug: duplicate-file-finder
+title: Duplicate File Finder
+difficulty: medium
+tools: [find]
+topics: [files]
+time_limit_seconds: 5
+memory_limit_mb: 64
