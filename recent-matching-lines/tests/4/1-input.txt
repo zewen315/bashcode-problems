@@ -1,0 +1,4 @@
+NOT_AN_ERRORCODE here
+ERROR real one
+some ERRORLIKE text
+ERROR real two

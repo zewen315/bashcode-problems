@@ -1,0 +1,8 @@
+id: 41
+slug: chronological-formatter
+title: Chronological Formatter
+difficulty: easy
+tools: [date]
+topics: [text-processing]
+time_limit_seconds: 5
+memory_limit_mb: 64

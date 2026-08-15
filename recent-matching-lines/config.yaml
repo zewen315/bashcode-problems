@@ -1,0 +1,8 @@
+id: 40
+slug: recent-matching-lines
+title: Recent Matching Lines
+difficulty: easy
+tools: [tail]
+topics: [text-processing]
+time_limit_seconds: 5
+memory_limit_mb: 64

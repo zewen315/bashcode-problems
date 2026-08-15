@@ -1,0 +1,4 @@
+a ERROR x
+b INFO y
+c ERROR z
+d INFO w

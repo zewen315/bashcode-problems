@@ -1,0 +1,8 @@
+id: 39
+slug: log-file-digest
+title: Log File Digest
+difficulty: easy
+tools: [wc]
+topics: [text-processing]
+time_limit_seconds: 5
+memory_limit_mb: 64

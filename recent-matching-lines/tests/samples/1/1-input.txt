@@ -1,0 +1,6 @@
+INFO start
+ERROR one
+INFO mid
+ERROR two
+INFO end
+ERROR three

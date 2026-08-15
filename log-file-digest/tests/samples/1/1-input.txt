@@ -1,0 +1,4 @@
+INFO service started
+WARN low disk space
+
+INFO retry succeeded

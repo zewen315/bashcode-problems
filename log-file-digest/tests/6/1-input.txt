@@ -1,0 +1,8 @@
+2024-01-01 INFO service started
+2024-01-01 WARN memory high
+
+2024-01-01 INFO retry attempt 1
+
+2024-01-01 ERROR connection failed
+2024-01-01 INFO recovered
+
