@@ -1,0 +1,8 @@
+id: 34
+slug: service-health-summary
+title: Service Health Summary
+difficulty: easy
+tools: [jq]
+topics: [text-processing]
+time_limit_seconds: 5
+memory_limit_mb: 64

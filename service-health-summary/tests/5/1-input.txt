@@ -1,0 +1,10 @@
+{
+  "services": [
+    {"name": "solo-ok", "region": "r1", "instances": [
+      {"id": "solo-ok-1", "status": "healthy"}
+    ]},
+    {"name": "solo-bad", "region": "r1", "instances": [
+      {"id": "solo-bad-1", "status": "failed"}
+    ]}
+  ]
+}

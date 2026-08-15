@@ -1,0 +1,9 @@
+{
+  "services": [
+    {"name": "cache", "region": "us-east", "instances": [
+      {"id": "cache-1", "status": "healthy"},
+      {"id": "cache-2", "status": "failed"},
+      {"id": "cache-3", "status": "failed"}
+    ]}
+  ]
+}

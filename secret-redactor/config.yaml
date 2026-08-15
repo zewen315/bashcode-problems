@@ -1,8 +1,0 @@
-id: 28
-slug: secret-redactor
-title: Secret Redactor
-difficulty: medium
-tools: [sed]
-topics: [text-processing]
-time_limit_seconds: 5
-memory_limit_mb: 64

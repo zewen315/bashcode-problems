@@ -1,0 +1,8 @@
+{
+  "services": [
+    {"name": "svc1", "region": "r1", "instances": []},
+    {"name": "svc2", "region": "r1", "instances": [
+      {"id": "svc2-1", "status": "failed"}
+    ]}
+  ]
+}

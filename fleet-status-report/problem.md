@@ -2,10 +2,7 @@
 
 A fleet of services each drop a one-line status file. Given a
 manifest of which services to check, look each one up and report
-what you find — this is the shape of script that turns "here's a
-list of 200 hostnames" into 200 individual lookups, which is exactly
-the case `xargs` (with `-I{}` to place each item wherever it's
-needed, not just tacked on the end of a command) is built for.
+what you find.
 
 ## Input
 `$1` is the path to a directory containing:

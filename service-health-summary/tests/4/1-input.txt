@@ -1,0 +1,10 @@
+{
+  "services": [
+    {"name": "gateway", "region": "r1", "instances": [
+      {"id": "gw-1", "status": "healthy"},
+      {"id": "gw-2", "status": "degraded"},
+      {"id": "gw-3", "status": "unknown"},
+      {"id": "gw-4", "status": "healthy"}
+    ]}
+  ]
+}

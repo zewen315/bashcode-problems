@@ -1,0 +1,20 @@
+{
+  "services": [
+    {
+      "name": "api",
+      "region": "us-east",
+      "instances": [
+        {"id": "api-1", "status": "healthy"},
+        {"id": "api-2", "status": "failed"}
+      ]
+    },
+    {
+      "name": "worker",
+      "region": "us-west",
+      "instances": [
+        {"id": "worker-1", "status": "healthy"},
+        {"id": "worker-2", "status": "healthy"}
+      ]
+    }
+  ]
+}

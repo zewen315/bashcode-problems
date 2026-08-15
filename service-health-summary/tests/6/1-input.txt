@@ -1,0 +1,22 @@
+{
+  "services": [
+    {"name": "web", "region": "us-east", "instances": [
+      {"id": "web-1", "status": "healthy"},
+      {"id": "web-2", "status": "healthy"}
+    ]},
+    {"name": "db", "region": "us-east", "instances": [
+      {"id": "db-1", "status": "failed"},
+      {"id": "db-2", "status": "healthy"},
+      {"id": "db-3", "status": "degraded"}
+    ]},
+    {"name": "queue", "region": "us-west", "instances": []},
+    {"name": "auth", "region": "eu-west", "instances": [
+      {"id": "auth-1", "status": "failed"}
+    ]},
+    {"name": "cache", "region": "us-east", "instances": [
+      {"id": "cache-1", "status": "unknown"},
+      {"id": "cache-2", "status": "unknown"},
+      {"id": "cache-3", "status": "healthy"}
+    ]}
+  ]
+}

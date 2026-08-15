@@ -1,0 +1,8 @@
+id: 35
+slug: secret-redactor-ii
+title: Secret Redactor II
+difficulty: medium
+tools: [sed]
+topics: [text-processing]
+time_limit_seconds: 5
+memory_limit_mb: 64
