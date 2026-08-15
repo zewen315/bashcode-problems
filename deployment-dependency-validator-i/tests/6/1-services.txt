@@ -1,7 +1,8 @@
-gateway: auth-service payment-service
-auth-service: db-service
-payment-service: db-service ledger-service
-db-service:
-notification-service: queue-service
-queue-service:
-analytics-service: kafka-service data-lake
+lb: web1 web2
+web1: api
+web2: api
+api: cache db
+cache:
+db:
+worker: queue
+queue:

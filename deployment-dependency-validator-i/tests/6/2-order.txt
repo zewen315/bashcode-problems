@@ -1,0 +1,8 @@
+lb
+web1
+api
+cache
+db
+web2
+queue
+worker

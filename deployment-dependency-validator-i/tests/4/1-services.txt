@@ -1,2 +1,5 @@
-api: ghost ghost db
+frontend: backend cache
+backend: db
+cache: redis
 db:
+redis:

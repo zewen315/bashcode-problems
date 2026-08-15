@@ -1,0 +1,5 @@
+db
+auth
+api
+redis
+cache

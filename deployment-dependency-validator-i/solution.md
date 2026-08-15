@@ -1,66 +1,99 @@
 # Solution
 
-Two passes: first learn which services are declared, then check every
-dependency against that set. Two ways to do the two passes.
+A simulation, not a lookup: walk the startup order once, and for each
+service, check whether everything it needs is already in the
+`started` set built up so far. Two ways to hold that set and the
+per-service dependency lists.
 
-## 1. `awk`, same file twice
+## 1. `awk`, two files
 
 ```bash
 awk -F': *' '
-NR == FNR { declared[$1] = 1; next }
-{
+NR == FNR {
   service = $1
   n = split($2, deps, " ")
-  delete seen
-  for (i = 1; i <= n; i++) {
-    d = deps[i]
-    if (!(d in declared) && !(d in seen)) {
-      print "MISSING: " service " depends on undefined service " d
-      seen[d] = 1
+  depcount[service] = n
+  for (i = 1; i <= n; i++) depnames[service, i] = deps[i]
+  next
+}
+{
+  service = $1
+  ok = 1
+  missing_n = 0
+  for (i = 1; i <= depcount[service]; i++) {
+    d = depnames[service, i]
+    if (!(d in started)) {
+      ok = 0
+      missing_n++
+      missing[missing_n] = d
     }
   }
-}' "$1" "$1"
+  if (ok) {
+    started[service] = 1
+  } else {
+    any_failed = 1
+    for (i = 1; i <= missing_n; i++) {
+      print "MISSING: " service " depends on " missing[i] ", which never started"
+    }
+  }
+}
+END {
+  if (!any_failed) print "ALL SERVICES STARTED"
+}' "$1" "$2"
 ```
 
-`-F': *'` splits each line on a colon plus any following spaces, so
-`$1` is the service name and `$2` is its dependency list with no
-leading whitespace to worry about. Passing `"$1" "$1"` — the same
-filename twice — is the classic `awk` two-pass idiom: `NR == FNR` is
-only true while reading the *first* copy (global record count still
-matches the per-file record count), so that block just builds the
-`declared` set and `next`s past the second block entirely. Once
-`awk` starts re-reading the same file as its second argument, `NR !=
-FNR` and the real work happens, already in declaration order for
-free since that's just the order `awk` reads the file. `seen` resets
-per service (`delete seen`) so a dependency listed twice in one
-service's line only ever prints once.
+`NR == FNR` is only true while reading the *first* file (`$1`), so
+that block just records each service's declared dependency list, in
+order — same two-pass idiom as Part I originally used, just now the
+second "pass" is a genuinely different file (`$2`) instead of the
+same file read twice. Once `$2` starts, each line is one attempt: walk
+`service`'s dependency list checking `d in started` — a dependency
+that's late, never scheduled, or itself failed all look identical
+here, since none of them ever made it into `started`. A service either
+starts clean (added to `started`, available to everything after it)
+or fails outright (every unmet dependency printed, `started` untouched
+— no partial credit, no second attempt). `any_failed` is what decides
+whether `ALL SERVICES STARTED` gets printed at the very end.
 
-## 2. Bash, two explicit passes
+## 2. Bash, two files
 
 ```bash
-declare -A declared
+declare -A depstr
+declare -A started
+any_failed=0
 
 while IFS=':' read -r service rest; do
-  declared[$service]=1
+  depstr[$service]="$rest"
 done < "$1"
 
-while IFS=':' read -r service rest; do
-  declare -A seen=()
-  for dep in $rest; do
-    if [ -z "${declared[$dep]}" ] && [ -z "${seen[$dep]}" ]; then
-      echo "MISSING: $service depends on undefined service $dep"
-      seen[$dep]=1
+while read -r service; do
+  [ -z "$service" ] && continue
+  ok=1
+  missing=()
+  for dep in ${depstr[$service]}; do
+    if [ -z "${started[$dep]}" ]; then
+      ok=0
+      missing+=("$dep")
     fi
   done
-done < "$1"
+  if [ "$ok" -eq 1 ]; then
+    started[$service]=1
+  else
+    any_failed=1
+    for dep in "${missing[@]}"; do
+      echo "MISSING: $service depends on $dep, which never started"
+    done
+  fi
+done < "$2"
+
+[ "$any_failed" -eq 0 ] && echo "ALL SERVICES STARTED"
 ```
 
-Same two-pass shape, written out as two separate `while` loops over
-`$1` instead of leaning on `awk`'s `NR == FNR` trick. `IFS=':' read -r
-service rest` splits each line at the first colon; that `IFS`
-assignment only applies to that one `read`, so the later `for dep in
-$rest` (unquoted on purpose) word-splits on the normal whitespace
-`IFS`, turning `" auth db"` into the two tokens `auth` and `db` with
-the leading space simply disappearing. `seen` is redeclared empty at
-the top of every outer iteration, giving each service its own
-dedup set the same way `delete seen` does in the `awk` version.
+Same two-file, two-loop shape: the first loop over `$1` just builds
+`depstr[service]` (a space-joined dependency list, bash's usual
+stand-in for a per-key array). The second loop is the actual
+simulation, one line of `$2` per iteration — `${started[$dep]}` being
+empty covers all three "not available" cases at once (late, never
+scheduled, already failed) the same way `d in started` does in the
+`awk` version, since a failed service is simply never added to
+`started` in the first place.

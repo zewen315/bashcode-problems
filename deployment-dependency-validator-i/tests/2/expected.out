@@ -1,2 +1,3 @@
-MISSING: queue depends on undefined service broker
-MISSING: notify depends on undefined service email
+MISSING: api depends on auth, which never started
+MISSING: auth depends on db, which never started
+MISSING: web depends on api, which never started

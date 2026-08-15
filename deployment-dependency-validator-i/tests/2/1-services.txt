@@ -1,5 +1,4 @@
-web: api queue
-api: db
+web: api
+api: auth
+auth: db
 db:
-queue: broker
-notify: queue email

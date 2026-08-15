@@ -1,1 +1,2 @@
-MISSING: cache depends on undefined service redis
+MISSING: api depends on auth, which never started
+MISSING: api depends on db, which never started

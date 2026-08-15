@@ -1,3 +1,6 @@
-MISSING: payment-service depends on undefined service ledger-service
-MISSING: analytics-service depends on undefined service kafka-service
-MISSING: analytics-service depends on undefined service data-lake
+MISSING: lb depends on web1, which never started
+MISSING: lb depends on web2, which never started
+MISSING: web1 depends on api, which never started
+MISSING: api depends on cache, which never started
+MISSING: api depends on db, which never started
+MISSING: web2 depends on api, which never started

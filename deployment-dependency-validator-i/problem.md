@@ -1,7 +1,8 @@
 # Deployment Dependency Validator I
 
-Given a set of services and what each one depends on, find every
-dependency that points at a service that was never actually declared.
+Given a set of services' dependencies and a proposed startup order,
+check whether that order actually works — does every service's
+dependencies get started before its own turn comes?
 
 ## Input
 `$1` is the path to a file with one service per line:
@@ -10,48 +11,72 @@ dependency that points at a service that was never actually declared.
 <service>: <dep1> <dep2> ...
 ```
 
-A service's dependency list may be empty (just `<service>:` with
-nothing after it). Every service named on the left of a `:` counts as
-**declared**, even if its own dependency list is empty.
+A service's dependency list may be empty (just `<service>:`).
+
+`$2` is the path to a file listing services one per line, in the
+order they're attempted to start. Every service named in `$2` is
+guaranteed to be declared in `$1` and named at most once, but `$2`
+isn't required to include every declared service — one that's simply
+never attempted is never "started," which can still cause something
+else to fail.
 
 ## Task
-For every service, check each of its dependencies: if that dependency
-was never declared (never appears on the left of a `:` anywhere in
-the file), it's missing.
+Simulate starting services in the order given by `$2`. For each
+service, in turn: it starts successfully only if *every* one of its
+declared dependencies has *already* started earlier in the same
+simulation. If even one dependency hasn't started yet — whether
+because it's scheduled later, was never attempted at all, or was
+itself attempted earlier and failed — this service fails to start
+too, and it never gets a second chance.
+
+Failures cascade: a service that fails to start never counts as
+"started" for anything that depends on it later.
 
 ## Output
-One line per distinct `(service, missing dependency)` pair:
+For every service that fails, one line per unmet dependency (in the
+order that service's own dependency list declares them):
 
 ```
-MISSING: <service> depends on undefined service <other>
+MISSING: <service> depends on <dep>, which never started
 ```
 
-In the order services are declared in the input, and within a
-service's own list, in the order its dependencies are listed. If a
-service lists the same missing dependency more than once, report it
-only once. Print nothing if every dependency resolves to a declared
-service.
+If every attempted service starts successfully, print:
+
+```
+ALL SERVICES STARTED
+```
 
 ## Constraints
-- At most 100,000 services.
-- Each service is declared at most once.
+- At most 100,000 services, at most 100,000 lines in the startup
+  order.
+- Each service is declared at most once in `$1`, and named at most
+  once in `$2`.
 - Service names contain no whitespace or `:`.
-- A service depending on itself doesn't count as missing, as long as
-  it's declared (it is, by definition, if it has its own line).
 
 ## Example
-Input:
+`$1`:
 ```
 api: auth db
 auth: db
 db:
 cache: redis
+redis:
 ```
 
-`redis` is never declared, so `cache`'s dependency on it is missing.
-Everything else (`auth`, `db`) is declared.
+`$2` (`api` is attempted before either of its dependencies):
+```
+api
+db
+auth
+redis
+cache
+```
+
+`api` fails — neither `auth` nor `db` has started yet at that point.
+Everything else starts fine, in the order given.
 
 Output:
 ```
-MISSING: cache depends on undefined service redis
+MISSING: api depends on auth, which never started
+MISSING: api depends on db, which never started
 ```

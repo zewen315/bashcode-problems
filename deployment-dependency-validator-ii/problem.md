@@ -2,11 +2,14 @@
 
 A follow-up to
 [Deployment Dependency Validator I](../deployment-dependency-validator-i):
-same input, but now look for dependency **cycles** instead of missing
-services.
+same *dependency declarations*, but now look for a **cycle** in the
+dependency graph itself, rather than checking a proposed startup
+order against it — there's no second file here, just the
+declarations.
 
 ## Input
-Same format as Part I — one service per line:
+`$1` is the path to a file with one service per line, same format as
+Part I's first file:
 
 ```
 <service>: <dep1> <dep2> ...

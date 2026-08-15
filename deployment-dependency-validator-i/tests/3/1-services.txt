@@ -1,2 +1,5 @@
-svcA: svcA svcB
-svcB:
+api: auth db
+auth: db
+db:
+cache: redis
+redis:

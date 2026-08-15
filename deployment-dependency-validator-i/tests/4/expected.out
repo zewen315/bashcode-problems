@@ -1,1 +1,3 @@
-MISSING: api depends on undefined service ghost
+MISSING: frontend depends on backend, which never started
+MISSING: frontend depends on cache, which never started
+MISSING: cache depends on redis, which never started
