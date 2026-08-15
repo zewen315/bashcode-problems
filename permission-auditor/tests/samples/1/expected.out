@@ -1,0 +1,2 @@
+FLAG: dangerous deploy.sh
+FLAG: world-writable secrets.env

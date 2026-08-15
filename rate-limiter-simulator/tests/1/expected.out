@@ -1,0 +1,6 @@
+0 alice ALLOWED
+1 alice ALLOWED
+2 bob ALLOWED
+3 alice BLOCKED
+4 alice BLOCKED
+8 alice ALLOWED

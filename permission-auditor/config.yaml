@@ -1,0 +1,8 @@
+id: 21
+slug: permission-auditor
+title: Permission Auditor
+difficulty: medium
+tools: []
+topics: [text-processing]
+time_limit_seconds: 5
+memory_limit_mb: 64

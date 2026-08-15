@@ -1,0 +1,8 @@
+id: 22
+slug: zombie-process-report
+title: Zombie Process Report
+difficulty: hard
+tools: []
+topics: [text-processing]
+time_limit_seconds: 5
+memory_limit_mb: 64

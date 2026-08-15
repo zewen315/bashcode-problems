@@ -1,0 +1,8 @@
+PARENT 70 (serviceC): 3 zombies
+  102 z3
+  103 z4
+  104 z5
+PARENT 50 (serviceA): 1 zombies
+  100 z1
+PARENT 60 (serviceB): 1 zombies
+  101 z2

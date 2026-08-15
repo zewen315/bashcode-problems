@@ -1,0 +1,8 @@
+id: 19
+slug: argument-parser-i
+title: Argument Parser I
+difficulty: easy
+tools: [getopts]
+topics: [shell-programming]
+time_limit_seconds: 5
+memory_limit_mb: 64

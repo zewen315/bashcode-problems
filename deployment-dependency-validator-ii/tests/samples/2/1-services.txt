@@ -1,0 +1,4 @@
+clean1: clean2
+clean2:
+loopA: loopB
+loopB: loopA

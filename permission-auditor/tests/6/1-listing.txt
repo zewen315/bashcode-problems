@@ -1,0 +1,7 @@
+-rw-rw-r-- 1 alice staff 100 group-writable-only.txt
+-rwxrwxrwx 1 alice staff 100 fully-open.sh
+drwxrwxrwx 2 alice staff 100 open-dir
+-rw-rw-rw- 1 alice staff 100 open-data.txt
+lrwxrwxrwx 1 alice staff 100 open-link
+-r--r--rw- 1 alice staff 100 readonly-but-world-writable.txt
+-rwxr--rwx 1 alice staff 100 weird-dangerous.sh

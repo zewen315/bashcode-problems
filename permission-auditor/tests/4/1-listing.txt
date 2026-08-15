@@ -1,0 +1,4 @@
+-rwxrwxrwx 1 alice staff 100 zeta.sh
+-rwxrwxrwx 1 alice staff 100 alpha.sh
+-rw-rw-rw- 1 alice staff 100 zulu.txt
+-rw-rw-rw- 1 alice staff 100 bravo.txt

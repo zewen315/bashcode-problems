@@ -1,0 +1,11 @@
+PARENT 9999 (UNKNOWN): 3 zombies
+  50 z-orphan-1
+  51 z-orphan-2
+  52 z-orphan-3
+PARENT 10 (nginx): 2 zombies
+  30 z-nginx-1
+  31 z-nginx-2
+PARENT 20 (postgres): 1 zombies
+  40 z-postgres-1
+PARENT 30 (z-nginx-1): 1 zombies
+  60 z-child-of-zombie

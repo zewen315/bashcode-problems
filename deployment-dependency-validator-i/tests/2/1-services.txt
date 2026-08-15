@@ -1,0 +1,5 @@
+web: api queue
+api: db
+db:
+queue: broker
+notify: queue email

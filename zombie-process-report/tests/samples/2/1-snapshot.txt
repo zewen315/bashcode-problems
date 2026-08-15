@@ -1,0 +1,2 @@
+1 0 S init
+500 8888 Z orphan

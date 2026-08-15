@@ -1,0 +1,7 @@
+PARENT 100 (sshd): 2 zombies
+  200 <defunct>
+  201 <defunct>
+PARENT 300 (cron): 1 zombies
+  400 <defunct>
+PARENT 9999 (UNKNOWN): 1 zombies
+  500 orphan-zombie

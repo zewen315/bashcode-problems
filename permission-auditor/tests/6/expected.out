@@ -1,0 +1,4 @@
+FLAG: dangerous fully-open.sh
+FLAG: dangerous weird-dangerous.sh
+FLAG: world-writable open-data.txt
+FLAG: world-writable readonly-but-world-writable.txt

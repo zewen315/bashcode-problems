@@ -1,0 +1,8 @@
+id: 23
+slug: deployment-dependency-validator-i
+title: Deployment Dependency Validator I
+difficulty: medium
+tools: []
+topics: [shell-programming]
+time_limit_seconds: 5
+memory_limit_mb: 64

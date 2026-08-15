@@ -1,0 +1,7 @@
+gateway: auth-service payment-service
+auth-service: db-service
+payment-service: db-service ledger-service
+db-service:
+notification-service: queue-service
+queue-service:
+analytics-service: kafka-service data-lake

@@ -1,0 +1,7 @@
+1 0 S init
+100 1 S sshd
+200 100 Z <defunct>
+201 100 Z <defunct>
+300 1 S cron
+400 300 Z <defunct>
+500 9999 Z orphan-zombie

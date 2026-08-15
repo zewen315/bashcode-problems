@@ -1,0 +1,3 @@
+MISSING: payment-service depends on undefined service ledger-service
+MISSING: analytics-service depends on undefined service kafka-service
+MISSING: analytics-service depends on undefined service data-lake

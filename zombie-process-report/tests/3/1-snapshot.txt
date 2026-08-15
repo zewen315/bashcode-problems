@@ -1,0 +1,2 @@
+1 0 S init
+999 999 Z self-parent

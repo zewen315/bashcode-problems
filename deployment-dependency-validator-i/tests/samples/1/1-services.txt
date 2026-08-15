@@ -1,0 +1,4 @@
+api: auth db
+auth: db
+db:
+cache: redis

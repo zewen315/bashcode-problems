@@ -1,0 +1,2 @@
+-rw-r--r-- 1 alice staff 100 one.txt
+-rwxr-xr-x 1 alice staff 200 two.sh

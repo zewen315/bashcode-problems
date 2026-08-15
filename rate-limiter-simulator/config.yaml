@@ -1,0 +1,8 @@
+id: 18
+slug: rate-limiter-simulator
+title: Rate Limiter Simulator
+difficulty: medium
+tools: []
+topics: [shell-programming]
+time_limit_seconds: 5
+memory_limit_mb: 64

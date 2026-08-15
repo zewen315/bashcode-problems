@@ -1,0 +1,7 @@
+alpha: beta
+beta: gamma delta
+gamma: epsilon
+delta:
+epsilon: zeta
+zeta: beta
+omega: alpha
