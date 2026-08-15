@@ -1,64 +1,46 @@
 # Permission Auditor
 
-Given an `ls -l`-style directory listing, flag entries with dangerous
-permissions.
+Given a real directory, flag regular files with dangerous
+permissions. There's no pre-formatted listing handed to you — inspect
+the directory yourself (`ls -l`, `stat`, or anything else) the way
+you would on a real box.
 
 ## Input
-`$1` is the path to a file with one entry per line:
-
-```
-<permissions> <links> <owner> <group> <size> <filename>
-```
-
-`<permissions>` is a 10-character string like `-rwxr-xr-x`:
-position 1 is the entry type (`-` for a regular file, `d` for a
-directory, `l` for a symlink), positions 2–4 are the owner's `rwx`,
-5–7 the group's, 8–10 everyone else's — each position is either the
-letter or `-`.
+`$1` is the path to a directory. It contains a flat mix of regular
+files, and possibly some subdirectories and symlinks too.
 
 ## Rules
-For every entry whose type is `-` (a regular file):
-- **`world-writable`**: the "other" write bit (position 9) is `w`.
+For every **regular file** directly inside `$1`:
+- **`world-writable`**: the "other" write bit is set.
 - **`dangerous`**: it's world-writable **and** at least one of the
-  three execute bits (position 4, 7, or 10) is `x`. A file only ever
-  gets one flag — `dangerous` takes priority, never print both for
-  the same file.
+  three execute bits (owner, group, or other — any of them) is set.
+  A file only ever gets one flag — `dangerous` takes priority, never
+  print both for the same file.
 
-Entries that are neither world-writable nor dangerous aren't printed
-at all.
-
-## Skipped entirely
-- Directories (type `d`) and symlinks (type `l`) — a symlink's own
-  permission bits aren't meaningful (most systems report them as
-  wide open regardless of what they point to), so they're never
-  evaluated, only skipped.
-- Any line whose permission field isn't exactly the expected
-  10-character shape starting with one of `-`, `d`, or `l` — skip it,
-  don't crash.
+A file that's neither isn't printed at all. Subdirectories and
+symlinks are never evaluated, only skipped — regardless of their own
+permission bits.
 
 ## Output
 One line per flagged file:
-
 ```
 FLAG: dangerous <filename>
 FLAG: world-writable <filename>
 ```
-
 All `dangerous` lines first, then all `world-writable` lines; each
-group sorted alphabetically by filename within itself.
+group sorted alphabetically by filename. `<filename>` is just the
+name, not a path. If nothing is flagged, print nothing.
 
 ## Constraints
-- At most 100,000 entries.
-- `filename` contains no whitespace.
-- Permission characters are only `r`, `w`, `x`, or `-` — no
-  setuid/setgid/sticky-bit letters (`s`/`S`/`t`/`T`) ever appear.
+- At most 10,000 entries directly inside `$1`.
+- Filenames contain no whitespace.
 
 ## Example
-Input:
+Directory contents (name — mode):
 ```
--rw-r--r-- 1 alice staff 1024 config.yaml
--rwxrwxrwx 1 alice staff 2048 deploy.sh
--rw-rw-rw- 1 alice staff  512 secrets.env
+config.yaml  — 644 (rw-r--r--)
+deploy.sh    — 777 (rwxrwxrwx)
+secrets.env  — 666 (rw-rw-rw-)
 ```
 
 Output:

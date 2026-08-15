@@ -1,1 +1,1 @@
-FLAG: dangerous evil.sh
+FLAG: world-writable data.txt

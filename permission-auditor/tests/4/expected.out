@@ -1,4 +1,4 @@
 FLAG: dangerous alpha.sh
 FLAG: dangerous zeta.sh
 FLAG: world-writable bravo.txt
-FLAG: world-writable zulu.txt
+FLAG: world-writable delta.txt

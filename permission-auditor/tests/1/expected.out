@@ -1,2 +1,2 @@
-FLAG: dangerous deploy.sh
-FLAG: world-writable secrets.env
+FLAG: dangerous backup.sh
+FLAG: world-writable shared.txt

@@ -1,3 +1,0 @@
-drwxrwxrwx 2 alice staff 4096 tmp
-lrwxrwxrwx 1 alice staff   11 current
--rw-rw-rw- 1 alice staff  256 data.txt
