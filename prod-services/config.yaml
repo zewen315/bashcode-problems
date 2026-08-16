@@ -6,3 +6,4 @@ tools: [awk, sort]
 topics: [text-processing]
 time_limit_seconds: 5
 memory_limit_mb: 64
+social_hook: "Given a list of hostnames, extract the unique prod services. Classic awk + sort warm-up."
