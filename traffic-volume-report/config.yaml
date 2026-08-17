@@ -6,4 +6,4 @@ tools: [awk, sort]
 topics: [text-processing]
 time_limit_seconds: 5
 memory_limit_mb: 64
-social_hook: "Compute total requests per edge server, filter out the quiet ones, and rank what's left by traffic. A clean awk + sort exercise."
+social_hook: "Compute total traffic per server, filter the busy ones, and rank by volume."
