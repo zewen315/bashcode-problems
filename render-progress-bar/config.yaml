@@ -6,3 +6,4 @@ tools: [awk]
 topics: [shell-programming]
 time_limit_seconds: 5
 memory_limit_mb: 64
+social_hook: "Render an ASCII progress bar from a percentage, rounding correctly to a fixed 20-char width."
