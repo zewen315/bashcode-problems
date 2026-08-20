@@ -6,3 +6,4 @@ tools: [awk, sort]
 topics: [text-processing]
 time_limit_seconds: 5
 memory_limit_mb: 64
+social_hook: "Parse a ps-style process listing and flag anything running over an hour."
