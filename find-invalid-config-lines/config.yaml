@@ -6,3 +6,4 @@ tools: [awk]
 topics: [text-processing]
 time_limit_seconds: 5
 memory_limit_mb: 64
+social_hook: "Given a server listing, flag lines with the wrong field count or a non-numeric port."
